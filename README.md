@@ -1,9 +1,9 @@
 Evdev Lua module
 ===
 
-A Lua 5.2 module for interacting with input devices on Linux. You can
-read events with a `Device` object, or create a virtual input device
-with a `Uinput` object.
+A Lua 5.2 and 5.3 module for interacting with input devices on Linux.
+You can read events with a `Device` object, or create a virtual input
+device with a `Uinput` object.
 
 The `evdev.constants` module contains most of the relevant constants
 from `linux/input.h` (EV_KEY, BTN_0, KEY_A, ABS_X, etc), and is used
@@ -128,6 +128,9 @@ for the human-friendly name visible to the system if given.
 
 `Uinput:write(type, code, value)` - feed the given event to the input
 system via this virtual device; must be called after `:init()`.
+Note that you need to write an (EV_SYN, SYN_REPORT, 0) event immediately
+after each batch of events; listeners to the virtual device won't
+see an event until you send the associated SYN.
 
 `Uinput:close()` - close the file descriptor; further writes will be
 errors. `Uinput` objects are automatically closed on garbage-collection.
