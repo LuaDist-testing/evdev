@@ -1,17 +1,8 @@
--- This file was automatically generated for the LuaDist project.
-
 package = "evdev"
-version = "1.1.0-1"
--- LuaDist source
+version = "scm-1"
 source = {
-  tag = "1.1.0-1",
-  url = "git://github.com/LuaDist-testing/evdev.git"
+   url = "git://github.com/Tangent128/lua-evdev"
 }
--- Original source
--- source = {
---    url = "git://github.com/Tangent128/lua-evdev",
---    tag = "evdev-1.1"
--- }
 description = {
    summary = "Lua library for using Linux evdev & uinput interfaces",
    detailed = [[
