@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "evdev"
-version = "2.2.0-1"
+version = "2.2.1-1"
 -- LuaDist source
 source = {
-  tag = "2.2.0-1",
+  tag = "2.2.1-1",
   url = "git://github.com/LuaDist-testing/evdev.git"
 }
 -- Original source
 -- source = {
 --    url = "git://github.com/Tangent128/lua-evdev",
---    tag = "evdev-2.2"
+--    tag = "evdev-2.2.1"
 -- }
 description = {
    summary = "Lua library for using Linux evdev & uinput interfaces",
@@ -31,8 +31,8 @@ build = {
    type = "builtin",
    modules = {
       evdev = "evdev.lua",
-      ['evdev.constants'] = "evdev/constants.lua",
-      ['evdev.core'] = {
+      ["evdev.constants"] = "evdev/constants.lua",
+      ["evdev.core"] = {
          sources = "evdev/core.c"
       }
    }
